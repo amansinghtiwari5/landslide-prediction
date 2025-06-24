@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg-light: #f0f8ff;
+  --primary: #0077b6;
+  --secondary: #48cae4;
+  --accent: #90e0ef;
+  --danger: #e63946;
+  --safe: #06d6a0;
+  --card-bg: #ffffffdd;
+  --border-radius: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--bg-light), #ffffff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+.hero-header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Form Elements */
+input[type="number"] {
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+}
+
+/* Buttons */
+button.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: var(--secondary);
+}
+
+/* Prediction Result */
+#predictionResult {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Chart container */
+#barChart, #gaugeChart, #historyChart {
+  height: 300px;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .row > div {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* DARK MODE base */
+.dark-mode {
+    background-color: #121212 !important;
+    color: black !important;
+  }
+  
+  /* Cards */
+  .dark-mode .card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333 !important;
+  }
+  
+  /* Card headers: KEEP Bootstrap styling (primary, success, etc.) */
+  .dark-mode .card-header {
+    color: inherit !important;
+  }
+  
+  /* Title (h1) stays default */
+  .dark-mode h1 {
+    color: black !important;
+  }
+  
+  /* Form labels and inputs */
+  .dark-mode .form-label {
+    color: #ffffff !important;
+  }
+  .dark-mode .form-control {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #555 !important;
+  }
+  
+  /* Buttons */
+  .dark-mode .btn-outline-secondary {
+    color: #ffffff !important;
+    border-color: #aaa !important;
+  }
+  
+  
